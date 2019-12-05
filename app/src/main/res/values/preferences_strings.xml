@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tittle_acount">Acount</string>
+    <string name="summary_account">Security, change number</string>
+
+
+    <string name="tittle_category_notification">Notifications</string>
+
+
+    <string name="key_notification">notifications</string>
+    <string name="title_notificacion">Conversation sounds</string>
+    <string name="summary_notification">Play sounds for comming messages</string>
+
+
+    <string name="key_user">user</string>
+    <string name="title_user">User</string>
+    <string name="summary_user">Your user data here</string>
+
+
+    <string name="key_psw">password</string>
+    <string name="title_psw">Password</string>
+    <string name="summary_psw">Your password</string>
+</resources>

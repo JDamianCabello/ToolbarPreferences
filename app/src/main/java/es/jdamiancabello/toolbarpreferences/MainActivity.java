@@ -3,6 +3,7 @@ package es.jdamiancabello.toolbarpreferences;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 import android.view.Menu;
@@ -43,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
                 msg = "edit option";
                 break;
             case R.id.menu_settings:
+                showSettings();
                 msg = "settings option";
                 break;
             case R.id.menu_aboutus:
@@ -52,5 +54,15 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this,"Selected " + msg,Toast.LENGTH_SHORT).show();
 
         return super.onOptionsItemSelected(item);
+    }
+
+    /**
+     * Este método carga la ventana de preferencias generales
+     */
+    private void showSettings(){
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.add(R.id.content, new SettingsFragment());
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
     }
 }
